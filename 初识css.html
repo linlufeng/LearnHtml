@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>初识css样式</title>
+	<style type="text/css">
+	h1{color: red; text-align: center;}
+	p{color: blue;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body style="background-color:green">
+	<h1 style="font-family:verdana">这是标题</h1>
+	<p style="font-family:arial;font-size:20px;">这是段落</p>
+	<a href="https://linlufeng.github.io" style="text-decoration:none";>没有下划线的链接，访问linlufeng</a>
+<!-- 
+CSS 是在 HTML 4 开始使用的,是为了更好的渲染HTML元素而引入的.
+CSS 可以通过以下方式添加到HTML中:
+内联样式- 在HTML元素中使用"style" 属性
+内部样式表 -在HTML文档头部 <head> 区域使用<style> 元素 来包含CSS
+外部引用 - 使用外部 CSS 文件
+最好的方式是通过外部引用CSS文件.
+ -->
+
+<p style="color:blue;background-color:red;margin-left:20x">这是一个内联样式的段落</p>
+
+<!-- 
+内部样式表
+当单个文件需要特别样式时，就可以使用内部样式表。你可以在<head> 部分通过 <style>标签定义内部样式表:
+<head>
+<style type="text/css">
+body {background-color:yellow;}
+p {color:blue;}
+</style>
+</head>
+ -->
+<!-- 
+外部样式表
+当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观。
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+ -->
+</body>
+</html>
