@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>html表格</title>
+	<style type="text/css">
+	thead {color:red; text-align: center;}
+	tbody {color: black; text-align: center;}
+	tfoot {color: blue; text-align: center;}
+	</style>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>linlufeng</td>
+			<td>age 30</td>
+		</tr>
+		<tr>
+			<td>linqing</td>
+			<td>age 30</td>
+		</tr>
+		<tr>
+			<td>xiejuqiang</td>
+			<td>age 31</td>
+		</tr>
+	</table>
+	<p>
+		HTML 表格和边框属性 <b>border</b><br>
+		如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。<br>
+	</p>
+
+	<table border="1">
+		<tr>
+			<th>name</th>
+			<th>age</th>
+		</tr>
+		<tr>
+			<td>linlufeng</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>linqing</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>xiejuqiang</td>
+			<td>31</td>
+		</tr>
+
+	</table>
+	<p>
+		HTML 表格表头<br>
+		表格的表头使用 '< th >' 标签进行定义。<br>
+		大多数浏览器会把表头显示为粗体居中的文本<br>
+	</p>
+
+	<h4>水平标题：</h4>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Telephone</th>
+			<th>Telephone</th>
+		</tr>
+		<tr>
+			<td>Bill Gates</td>
+			<td>555 77 854</td>
+			<td>555 77 854</td>
+		</tr>
+	</table>
+
+	<h4>垂直标题：</h4>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<td>Bill Gates</td>
+		</tr>
+		<tr>
+			<th>Telephone</th>
+			<td>555 77 854</td>
+		</tr>
+	</table>
+
+	<h4>带有标题&边距的表格：</h4>
+	<table border="1" cellpadding="10">
+		<caption>Friends</caption>
+		<tr>
+			<th>name</th>
+			<th>age</th>
+		</tr>
+		<tr>
+			<td>linlufeng</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>linqing</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>xiejuqiang</td>
+			<td>31</td>
+		</tr>
+	</table>
+
+	<h4>带有标题&间距的表格：</h4>
+	<table border="1" cellspacing="10">
+		<caption>Friends</caption>
+		<tr>
+			<th>name</th>
+			<th>age</th>
+		</tr>
+		<tr>
+			<td>linlufeng</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>linqing</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>xiejuqiang</td>
+			<td>31</td>
+		</tr>
+	</table>
+
+		<h4>带有页眉页脚的表格：</h4>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Month</th>
+				<th>Savings</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>Sum</td>
+				<td>$180</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>January</td>
+				<td>$100</td>
+			</tr>
+			<tr>
+				<td>February</td>
+				<td>$80</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h4>colgroup 和 col 标签为表格中列属性</h4>
+	<table border="1">
+		<colgroup>
+		<col span="2" style="background-color:red">
+		<col style="background-color:yellow">
+	</colgroup>
+	<tr>
+		<th>ISBN</th>
+		<th>Title</th>
+		<th>Price</th>
+	</tr>
+	<tr>
+		<td>3476896</td>
+		<td>My first HTML</td>
+		<td>$53</td>
+	</tr>
+</table>
+</body>
+</html>
