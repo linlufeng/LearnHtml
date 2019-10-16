@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表单和输入</title>
+	<style type="text/css">
+	body{background: orange}
+	</style>
+</head>
+<body>
+	<p>文本域：</p>
+	<form>
+		Name:<input type="text" name="Name"><br>
+		Phone:<input type="text" name="phone">
+	</form>
+	<p><b>注意：</b> 表单本身是不可见的。并且注意一个文本字段的默认宽度是20个字符。</p>
+	<p>创建密码字段：</p>
+	<form>
+		PassWord:<input type="password" name="password">
+	</form>
+	<p>单选按钮：</p>
+	<form>
+		<input type="radio" name="sex" value="male">Male<br>
+		<input type="radio" name="sex" value="female">Female<br>
+	</form>
+	<p>复选框：</p>
+	<form>
+		<input type="checkbox" name="ball" value="football">I like football<br>
+		<input type="checkbox" name="ball" value="basketball">I like basketball<br>
+		<input type="checkbox" name="ball" value="tennis">I like tennis<br>
+	</form>
+	<p>提交按钮：</p>
+	<form>
+		account:<input type="text" name="account">
+		<input type="submit" value="提交">
+	</form>
+	<p>简单的下拉列表：</p>
+	<form action="">
+		<select name="cars">
+			<option value="volvo">volvo</option>
+			<option value="BMW">BMW</option>
+			<option value="Audi">Audi</option>
+			<option value="Benz">Benz</option>
+			<option value="TOYOTA">TOYOTA</option>
+		</select>
+	</form>
+
+	<p>预选下拉列表：</p>
+	<form action="">
+		<select name="cars">
+		<option value="volvo">volvo</option>
+		<option value="BMW" selected>BMW</option>
+		<option value="Audi">Audi</option>
+		<option value="Benz">Benz</option>
+		<option value="TOYOTA">TOYOTA</option>
+	</form>
+
+	<p>文本域：</p>
+	<form>
+		<textarea rows="10" cols="30">
+			aaaaaaaabbbbbbbbcccccccddddddeeeeeeffff
+		</textarea>
+
+	</form>
+
+	<form>
+		<input type="button" value="Hello">
+	</form>
+
+	<p>带边框的表单：</p>
+	<form action="">
+		<fieldset>
+			<legend>Adress Book</legend>
+			Name: <input type="text" size="30"><br>
+			E-mail: <input type="text" size="30"><br>
+			Date of birth: <input type="text" size="10">
+		</fieldset>
+	</form>
+
+	<h3>发送邮件到 8912462@qq.com:</h3>
+
+	<form action="MAILTO:8912462@qq.com" method="post" enctype="text/plain">
+		Name:<br>
+		<input type="text" name="name" value="your name"><br>
+		E-mail:<br>
+		<input type="text" name="mail" value="your email"><br>
+		Comment:<br>
+		<input type="text" name="comment" value="your comment" size="50"><br><br>
+		<input type="submit" value="发送">
+		<input type="reset" value="重置">
+	</form>
+	
+</body>
+</html>
