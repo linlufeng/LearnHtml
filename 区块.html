@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>html区块</title>
+</head>
+<body>
+	<p>
+		<div id="text1"></div>
+	</p>
+	<p>
+		<b>HTML 区块元素</b><br>
+		大多数 HTML 元素被定义为块级元素或内联元素。<br>
+		块级元素在浏览器显示时，通常会以新行来开始（和结束）。
+		<div style="background-color:#0000FF" id="text2"></div>
+	</p>
+	<p>
+		<b>HTML 内联元素</b><br>
+		内联元素在显示时通常不会以新行开始。<br>
+		<div id="text3"></div>
+	</p>
+	<p>
+		<b>HTML div span 元素</b>
+	</p>
+
+	<p>我的母亲有 <span style="color:blue;">蓝色</span> 的眼睛。</p>
+
+</body>
+
+<script src="js/zepto.min.js"></script>
+<script>
+    $("#text1").text('HTML 可以通过<div>和<span> 将元素组合起来')
+    $("#text2").text('实例: <h1>, <p>, <ul>, <table>')
+    $("#text3").text('实例: <b>, <td>, <a>, <img>')
+</script>
+</html>
