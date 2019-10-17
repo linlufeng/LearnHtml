@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML字符实体</title>
+</head>
+<body>
+	<h1><b>HTML 字符实体</b></h1>
+	<hr>
+	<p>HTML 中的预留字符必须被替换为字符实体。<br>
+一些在键盘上找不到的字符也可以使用字符实体来替换。</p>
+
+<pre>在 HTML 中，某些字符是预留的。
+在 HTML 中不能使用小于号（<）和大于号（>），这是因为浏览器会误认为它们是标签。
+如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）。 字符实体类似这样：
+&entity_name;
+或
+&#entity_number;</pre>
+<p id="text1"></p>
+
+<h2><b>不间断空格(Non-breaking Space)</b></h2>
+<pre>HTML 中的常用字符实体是不间断空格(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)。
+浏览器总是会截短 HTML 页面中的空格。如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。如需在页面中增加空格的数量，您需要使用 &nbsp; 字符实体。
+</pre>
+
+<h2><b>结合音标符</b></h2>
+<pre>发音符号是加到字母上的一个"glyph(字形)"。
+一些变音符号, 如 尖音符 (  ̀) 和 抑音符 (  ́) 。
+变音符号可以出现字母的上面和下面，或者字母里面，或者两个字母间。
+变音符号可以与字母、数字字符的组合来使用。
+以下是一些实例:</pre>
+<p>a&#768<br>
+a&#769<br>
+a&#770<br>
+a&#771<br>
+</p>
+
+<h2><b>HTML字符实体</b></h2>
+<table style="background-color:gray;color:white;" border="1">
+	<tr>
+		<th style="width:100px">显示结果</th>
+		<th style="width:100px">描述</th>
+		<th style="width:100px">实体名称</th>
+		<th style="width:100px">实体编号</th>
+	</tr>
+	<tr>
+		<td style="text-align:center"> </td>
+		<td style="text-align:center">空格</td>
+		<td style="text-align:center" id="text2"></td>
+		<td style="text-align:center" id="text3"></td>
+	</tr>
+	<tr>
+		<td style="text-align:center">&lt</td>
+		<td style="text-align:center">小于号</td>
+		<td style="text-align:center" id="text4"></td>
+		<td style="text-align:center" id="text5"></td>
+	</tr>
+	<tr>
+		<td style="text-align:center">&gt</td>
+		<td style="text-align:center">大于号</td>
+		<td style="text-align:center" id="text6"></td>
+		<td style="text-align:center" id="text7"></td>
+	</tr>
+</table>
+<a href="https://www.runoob.com/tags/ref-entities.html">更多：参考列表</a>
+</body>
+
+<script src="js/zepto.min.js"></script>
+<script>
+    $("#text1").text('如需显示小于号，我们必须这样写：&lt; 或 &#60; 或 &#060;');
+    $("#text2").text('&nbsp;');
+    $("#text3").text('&#160;');
+    $("#text4").text('&lt;');
+    $("#text5").text('&#60;');
+    $("#text6").text('&gt;');
+    $("#text7").text('&#62;');
+</script>
+</html>
