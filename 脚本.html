@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>初识HTML脚本</title>
+</head>
+<body>
+	<h2>HTML <span style="color:green">脚本</span></h2>
+	<hr>
+	JavaScript 使 HTML 页面具有更强的动态和交互性。
+	<hr>
+	<p>
+		插入一段脚本：
+	</p>
+	<script type="text/javascript">
+		document.write("hello world!");
+	</script>
+
+	<h2>HTML &ltscript&gt 标签</h2>
+	<pre>
+&ltscript&gt 标签用于定义客户端脚本，比如 JavaScript。
+&ltscript&gt 元素既可包含脚本语句，也可通过 src 属性指向外部脚本文件。
+JavaScript 最常用于图片操作、表单验证以及内容动态更新。
+	</pre>
+
+	<h2>HTML &ltnoscript&gt 标签</h2>
+<pre>
+&ltnoscript&gt 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时。
+&ltnoscript&gt元素可包含普通 HTML 页面的 body 元素中能够找到的所有元素。
+只有在浏览器不支持脚本或者禁用脚本时，才会显示 &ltnoscript&gt 元素中的内容：
+</pre>
+	<p>
+		<script>
+		document.write("Hello World!")
+		</script>
+		<!-- 体验此功能，safari-偏好设置-安全性-取消勾选javescript -->
+		<noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+	</p>
+
+	<h2><b>JavaScript体验</b></h2>
+	<h3>JavaScript可以直接在html输出：</h3>
+	<script >
+	document.write("<p>这是一个段落.</p>");
+	</script>
+
+	<h3>JavaScript事件响应：</h3>
+	<p id="demo">
+JavaScript 可以触发事件，就像按钮点击。</p>
+	<button type="button" onclick="myFunction()">点我!</button>
+
+	<script>
+		function myFunction(){
+			document.getElementById("demo").innerHTML="Hello JavaScript!";
+		}
+	</script>
+	
+	<h2>JavaScript处理Html样式：</h2>
+	<script>
+		document.getElementById("demo").style.color="#ff0000";
+	</script>
+</body>
+</html>
