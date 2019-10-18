@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>id和class选择器</title>
+	<style type="text/css">
+	#para1{
+		text-align: center;
+		color: red;
+	}
+	.center{
+		text-align: center;
+	}
+	h3.center{
+		text-align: center;
+	}
+	h3.custom{
+		text-align: right;
+		color: red;
+	}
+	</style>
+</head>
+
+<body>
+	<h2><b>id 和 class 选择器</b></h1>
+	<p>如果你要在HTML元素中设置CSS样式，你需要在元素中设置"id" 和 "class"选择器。</p>
+	<h2><b>id 选择器</b></h2>
+	<pre>id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。
+HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 "#" 来定义。
+以下的样式规则应用于元素属性 id="para1":</pre>
+<pre>实例：
+#para1
+{
+    text-align:center;
+    color:red;
+}
+<p style="color:red"><b>ID属性不要以数字开头，数字开头的ID在 Mozilla/Firefox 浏览器中不起作用。</b></p>
+<p id="para1">这个段落设置&ltp id="para1"&gt</p>
+<p>这个段落没有做设置</p>
+
+<h2><b>class 选择器</b></h2>
+<pre>class 选择器用于描述一组元素的样式，class 选择器有别于id选择器，class可以在多个元素中使用。
+class 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一个点"."号显示：
+在以下的例子中，所有拥有 center 类的 HTML 元素均为居中。</pre>
+</pre>
+
+<h1 class="center">标题居中</h1>
+<p class="center">段落居中</p>
+<p> 所有的 h3 元素使用 class="custom" 让该元素的文本居右文本红色:</p>
+<p> h3.custom{text-align:right;color: red;}</p>
+
+<h3 class="custom">h3标题居右</h3>
+<h3 class="custom">h3标题居右</h3>
+<h4 class="custom">h4标题不起作用</h4>
+</body>
+</html>
