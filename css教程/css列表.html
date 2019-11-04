@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS 列表</title>
+	<style type="text/css">
+	/*ul{list-style-image: url('images/2.jpg');}*/
+	</style>
+</head>
+<body>
+	<h1>CSS 列表</h1>
+	<hr>
+	<p>CSS列表属性作用如下：</p>
+	<ul>
+		<li>设置不同的列表项标记为有序列表</li>
+		<li>设置不同的列表项标记为无序列表</li>
+		<li>设置列表项标记为图像</li>
+	</ul>
+	<hr>
+	<h1>列表</h1>
+	<p>在HTML中，有两种类型的列表：</p>
+	<ul>
+		<li>无序列表 - 列表项标记用特殊图形（如小黑点、小方框等）</li>
+		<li>有序列表 - 列表项的标记有数字或字母</li>
+	</ul>
+<p>使用CSS，可以列出进一步的样式，并可用图像作列表项标记。</p>
+<hr>
+<h1>不同的列表项标记</h1>
+<p>list-style-type属性指定列表项标记的类型是：</p>
+<p style="color:green;">实例</p>
+<pre>ul.a {list-style-type: circle;}
+ul.b {list-style-type: square;}
+ol.c {list-style-type: upper-roman;}
+ol.d {list-style-type: lower-alpha;}</pre>
+<p>一些值是无序列表，以及有些是有序列表。</p>
+<hr>
+<h1>作为列表项标记的图像</h1>
+<p>要指定列表项标记的图像，使用列表样式图像属性：</p>
+<pre>ul
+{
+    list-style-image: url('sqpurple.gif');
+}</pre>
+
+<h1>所有CSS列表属性</h1>
+<table border="1">
+	<tr>
+		<th width="200">属性</th>
+		<th wdtth="400">描述</th>
+	</tr>
+	<tr>
+		<td>list-style</td>
+		<td>简写属性。用于把所有用于列表的属性设置于一个声明中</td>
+	</tr>
+	<tr>
+		<td>list-style-image</td>
+		<td>将图象设置为列表项标志。</td>
+	</tr>
+	<tr>
+		<td>list-style-position</td>
+		<td>设置列表中列表项标志的位置。</td>
+	</tr>
+	<tr>
+		<td>list-style-type</td>
+		<td>设置列表项标志的类型。</td>
+	</tr>
+</table>
+
+</body>
+</html>
