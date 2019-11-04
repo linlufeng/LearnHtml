@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS 连接</title>
+	<style type="text/css">
+		a:link{color: #000000; text-decoration:none; background-color:#B2FF99;}
+		a:visited{color: #00ff00; text-decoration:none; background-color:#FFFF85;}
+		a:hover{color: #ff00ff; text-decoration:underline; background-color:#FF704D;}
+		a:active{color: #0000ff; text-decoration:underline; background-color:#FF704D;}
+	</style>
+</head>
+<body>
+	<h1>CSS 连接</h1>
+	<hr>
+	<p>不同的链接可以有不同的样式。</p>
+	<hr>
+	<h1>链接样式</h1>
+	<pre>链接的样式，可以用任何CSS属性（如颜色，字体，背景等）。
+特别的链接，可以有不同的样式，这取决于他们是什么状态。
+这四个链接状态是：</pre>
+	<ul>
+		<li>a:link - 正常，未访问过的链接</li>
+		<li>a:visited - 用户已访问过的链接</li>
+		<li>a:hover - 当用户鼠标放在链接上时</li>
+		<li>a:active - 链接被点击的那一刻</li>
+	</ul>
+
+	<a href="https://www.baidu.com">百度一下</a>
+	<p>当设置为若干链路状态的样式，也有一些顺序规则：</p>
+	<ul>
+		<li>a:hover 必须跟在 a:link 和 a:visited后面</li>
+		<li>a:active 必须跟在 a:hover后面</li>
+	</ul>
+	<hr>
+	<h1>常见的链接样式</h1>
+	<pre>根据上述链接的颜色变化的例子，看它是在什么状态。
+让我们通过一些其他常见的方式转到链接样式：</pre>
+<h1>文本修饰</h1>
+<p>text-decoration 属性主要用于删除链接中的下划线：</p>
+<pre>a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}</pre>
+<h1>背景颜色</h1>
+<p>背景颜色属性指定链接背景色：</p>
+<p style="color:green;">实例</p>
+<pre>a:link {background-color:#B2FF99;}
+a:visited {background-color:#FFFF85;}
+a:hover {background-color:#FF704D;}
+a:active {background-color:#FF704D;}</pre>
+</body>
+
+</html>
