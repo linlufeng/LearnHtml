@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript简介</title>
+</head>
+
+<body>
+	<h1>JavaScript 简介</h1>
+	<hr>
+	<pre>JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。</pre>
+	<hr>
+	<h1>JavaScript 是脚本语言</h1>
+	<pre>JavaScript 是一种轻量级的编程语言。
+JavaScript 是可插入 HTML 页面的编程代码。
+JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。
+JavaScript 很容易学习。</pre>
+	<hr>
+	<h1>您将学到什么</h1>
+	<p>下面是您将在本教程中学到的主要内容。</p>
+	<hr>
+	<h1>JavaScript：直接写入 HTML 输出流</h1>
+	<pre>document.write("&lth1&gt这是一个标题&lt/h1&gt");
+document.write("&ltp&gt这是一个段落。&lt/p&gt");</pre>
+<script type="text/javascript">
+	document.write("<h1>这是一个标题</h1>");
+	document.write("<p>这是一个段落。</p>");
+</script>
+<hr>
+<h1>JavaScript：对事件的反应</h1>
+<button type="button" onclick="alert('欢迎!')">点我!</button>
+<pre>alert() 函数在 JavaScript 中并不常用，但它对于代码测试非常方便。
+onclick 事件只是您即将在本教程中学到的众多事件之一。
+</pre>
+<hr>
+<h1>JavaScript：改变 HTML 内容</h1>
+<p>使用 JavaScript 来处理 HTML 内容是非常强大的功能。</p>
+<pre>
+使用 JavaScript 来处理 HTML 内容是非常强大的功能。
+实例
+x=document.getElementById("demo");  //查找元素
+x.innerHTML="Hello JavaScript";    //改变内容
+您会经常看到 document.getElementById("some id")。这个方法是 HTML DOM 中定义的。
+DOM (Document Object Model)（文档对象模型）是用于访问 HTML 元素的正式 W3C 标准。
+您将在本教程的多个章节中学到有关 HTML DOM 的知识。
+</pre>
+<p id="demo">这是“demo”段落</p>
+
+<button type="button" onclick="changeDemo()">试一试</button>
+<script type="text/javascript">
+	function changeDemo(){
+		x=document.getElementById("demo");  //查找元素
+		x.innerHTML="Hello JavaScript";    //改变内容
+	}
+</script>
+<hr>
+<h1>JavaScript：改变 HTML 图像</h1>
+<p>本例会动态地改变 HTML &ltimage&gt 的来源（src）：</p>
+
+<script type="text/javascript">
+	function changeImage () {
+		// body...
+		element = document.getElementById("myimage");
+		if (element.src.match("pic_bulbon")) {
+			element.src="images/pic_bulboff.gif";
+		} else{
+			element.src = "images/pic_bulbon.gif"
+		};
+	}
+</script>
+<p>点击以下灯泡查看效果：</p>
+<img id="myimage" onclick="changeImage()" src="images/pic_bulboff.gif" width="100" height="180">
+<hr>
+<h1>JavaScript：改变 HTML 样式</h1>
+<pre>实例
+x=document.getElementById("demo2")  //找到元素 
+x.style.color="#ff0000";           //改变样式</pre>
+<p id="demo2">这是demo2</p>
+<button type="button" onclick="changeStyle()">点击改变样式</button>
+<script>
+	function changeStyle(){
+		x=document.getElementById("demo2")  //找到元素 
+		x.style.color="#ff0000";           //改变样式
+	}
+</script>
+<pre>JavaScript 与 Java 是两种完全不同的语言，无论在概念上还是设计上。
+Java（由 Sun 发明）是更复杂的编程语言。
+ECMA-262 是 JavaScript 标准的官方名称。
+JavaScript 由 Brendan Eich 发明。它于 1995 年出现在 Netscape 中（该浏览器已停止更新），并于 1997 年被 ECMA（一个标准协会）采纳。</pre>
+</body>
+</html>
