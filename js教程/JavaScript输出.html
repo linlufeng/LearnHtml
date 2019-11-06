@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript 输出</title>
+</head>
+<body>
+	<h1>JavaScript 输出</h1>
+	<hr>
+	<p>JavaScript 没有任何打印或者输出的函数。</p>
+	<h1>JavaScript 显示数据</h1>
+	<p>JavaScript 可以通过不同的方式来输出数据：</p>
+	<ul>
+		<li>使用 window.alert() 弹出警告框。</li>
+		<li>使用 document.write() 方法将内容写到 HTML 文档中。</li>
+		<li>使用 innerHTML 写入到 HTML 元素。</li>
+		<li>使用 console.log() 写入到浏览器的控制台。</li>
+	</ul>
+	<hr>
+	<h1>使用 window.alert()</h1>
+	<p>你可以弹出警告框来显示数据：</p>
+<script>
+	window.alert(5+1);
+</script>
+	<hr>
+	<h1>操作HTML 元素</h1>
+	<pre>如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。
+请使用 "id" 属性来标识 HTML 元素，并 innerHTML 来获取或插入元素内容：</pre>
+	<p id="demo">demo</p>
+<script>
+	document.getElementById("demo").innerHTML = "aaaa";
+</script>
+	<hr>
+	<h1>写到 HTML 文档</h1>
+	<p>出于测试目的，您可以将JavaScript直接写在HTML 文档中：</p>
+<script>
+	document.write(Date());
+	document.write("<p>sasasa</p>");
+</script>
+<hr>
+<h1>写到控制台</h1>
+<script>
+	a=5;
+	b=6;
+	c=a+b;
+	console.log("hahahah"+c);
+</script>
+
+</body>
+</html>
