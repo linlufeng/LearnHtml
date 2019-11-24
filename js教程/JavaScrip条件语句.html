@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScrip条件语句</title>
+</head>
+<body>
+<h1>JavaScript if...Else 语句</h1>
+<hr>
+<p>条件语句用于基于不同的条件来执行不同的动作。</p>
+<h1>条件语句</h1>
+<pre>通常在写代码时，您总是需要为不同的决定来执行不同的动作。您可以在代码中使用条件语句来完成该任务。
+
+在 JavaScript 中，我们可使用以下条件语句：
+
+if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码
+if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码
+if...else if....else 语句- 使用该语句来选择多个代码块之一来执行
+switch 语句 - 使用该语句来选择多个代码块之一来执行</pre>
+<p id="demo">如果时间早于 20:00，会获得问候 "Good day"。</p>
+<button onclick="myFuntion()">点击这里</button>
+<script type="text/javascript">
+	function myFuntion() {
+		// body...
+		var x = "";
+		var time = new Date().getHours();
+		if (time<20) {
+			x = "Good day";
+			document.getElementById('demo').innerHTML = x;
+		}
+	}
+</script>
+<hr>
+<h1>if 语句</h1>
+<pre>只有当指定条件为 true 时，该语句才会执行代码。
+
+语法
+if (condition)
+{
+    当条件为 true 时执行的代码
+}
+请使用小写的 if。使用大写字母（IF）会生成 JavaScript 错误！
+
+实例
+当时间小于 20:00 时，生成问候 "Good day"：
+
+if (time<20)
+{
+    x="Good day";
+}
+x 的结果是：
+Good day</pre>
+<h1>if...else 语句</h1>
+<pre>请使用 if....else 语句在条件为 true 时执行代码，在条件为 false 时执行其他代码。
+
+语法
+if (condition)
+{
+    当条件为 true 时执行的代码
+}
+else
+{
+    当条件不为 true 时执行的代码
+}
+
+实例
+当时间小于 20:00 时，生成问候 "Good day"，否则生成问候 "Good evening"。
+
+if (time<20)
+{
+    x="Good day";
+}
+else
+{
+    x="Good evening";
+}
+x 的结果是：
+
+Good day</pre>
+</body>
+</html>
