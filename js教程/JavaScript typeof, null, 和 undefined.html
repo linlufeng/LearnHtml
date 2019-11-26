@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript typeof, null, 和 undefined</title>
+</head>
+<body>
+<h1>JavaScript typeof, null, 和 undefined</h1>
+<hr>
+<p>JavaScript typeof, null, undefined, valueOf()。</p>
+<hr>
+<h1>typeof 操作符</h1>
+<pre>
+你可以使用 typeof 操作符来检测变量的数据类型。
+实例
+typeof "John"                // 返回 string 
+typeof 3.14                  // 返回 number
+typeof false                 // 返回 boolean
+typeof [1,2,3,4]             // 返回 object
+typeof {name:'John', age:34} // 返回 object	
+</pre>
+<script>
+	console.log(typeof "John");
+	console.log(typeof 3.14);
+	console.log(typeof false);
+	console.log(typeof [1,2,3,4]);
+	console.log({name:'John', age:34});
+</script>
+<hr>
+<h1>null</h1>
+<pre>
+在 JavaScript 中 null 表示 "什么都没有"。
+null是一个只有一个值的特殊类型。表示一个空对象引用。
+Note	用 typeof 检测 null 返回是object。
+你可以设置为 null 来清空对象:
+实例
+var person = null;           // 值为 null(空), 但类型为对象
+
+你可以设置为 undefined 来清空对象:
+实例
+var person = undefined;     // 值为 undefined, 类型为 undefined
+</pre>
+<hr>
+<h1>undefined</h1>
+<pre>在 JavaScript 中, undefined 是一个没有设置值的变量。
+typeof 一个没有值的变量会返回 undefined。
+实例
+var person;                  // 值为 undefined(空), 类型是undefined
+
+任何变量都可以通过设置值为 undefined 来清空。 类型为 undefined.
+实例
+person = undefined;          // 值为 undefined, 类型是undefined</pre>
+<hr>
+<h1>undefined 和 null 的区别</h1>
+<pre>null 和 undefined 的值相等，但类型不等：
+typeof undefined             // undefined
+typeof null                  // object
+null === undefined           // false
+null == undefined            // true</pre>
+</body>
+</html>
