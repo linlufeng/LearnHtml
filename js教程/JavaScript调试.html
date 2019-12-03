@@ -1,0 +1,65 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript 调试</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>JavaScript 调试</h1>
+<hr>
+<p>在编写 JavaScript 时，如果没有调试工具将是一件很痛苦的事情。</p>
+<hr>
+<h1>JavaScript 调试</h1>
+<pre>没有调试工具是很难去编写 JavaScript 程序的。
+你的代码可能包含语法错误，逻辑错误，如果没有调试工具，这些错误比较难于发现。
+通常，如果 JavaScript 出现错误，是不会有提示信息，这样你就无法找到代码错误的位置。
+通常，你在编写一个新的 JavaScript 代码过程中都会发生错误。</pre>
+<hr>
+<h1>JavaScript 调试工具</h1>
+<pre>在程序代码中寻找错误叫做代码调试。
+调试很难，但幸运的是，很多浏览器都内置了调试工具。
+内置的调试工具可以开始或关闭，严重的错误信息会发送给用户。
+有了调试工具，我们就可以设置断点 (代码停止执行的位置), 且可以在代码执行时检测变量。
+浏览器启用调试工具一般是按下 F12 键，并在调试菜单中选择 "Console" 。</pre>
+<hr>
+<h1>console.log() 方法</h1>
+<script>
+	var a = 5;
+	var b = 6;
+	c = a + b;
+	console.log(c);
+</script>
+<button onclick="alert(c)"> click</button>
+<hr>
+<h1>设置断点</h1>
+<pre>在调试窗口中，你可以设置 JavaScript 代码的断点。
+在每个断点上，都会停止执行 JavaScript 代码，以便于我们检查 JavaScript 变量的值。
+在检查完毕后，可以重新执行代码（如播放按钮）。</pre>
+<hr>
+<h1>debugger 关键字</h1>
+<pre>debugger 关键字用于停止执行 JavaScript，并调用调试函数。
+这个关键字与在调试工具中设置断点的效果是一样的。
+如果没有调试可用，debugger 语句将无法工作。
+开启 debugger ，代码在第三行前停止执行。
+实例
+var x = 15 * 5;
+debugger;
+document.getElementbyId("demo").innerHTML = x;</pre>
+<script type="text/javascript">
+	function debuggerTest() {
+		// body...
+		var d = 10;
+		var e = 12;
+		debugger;
+		alert(d+e);
+	}
+</script>
+<button onclick="debuggerTest()">测试debuggerTest</button>
+<hr>
+<h1>主要浏览器的调试工具</h1>
+<pre>通常，浏览器启用调试工具一般是按下 F12 键，并在调试菜单中选择 "Console" 。
+各浏览器的步骤如下:</pre>
+<h1>Chrome 浏览器</h1>
+</body>
+</html>
