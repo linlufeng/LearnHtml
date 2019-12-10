@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript 表单</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		ul{
+			list-style-type: circle;
+			padding: 5px;
+    		margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<h1>JavaScript 表单</h1>
+<hr>
+<h1>JavaScript 表单验证</h1>
+<pre>HTML 表单验证可以通过 JavaScript 来完成。
+以下实例代码用于判断表单字段(fname)值是否存在， 如果不存在，就弹出信息，阻止表单提交：
+JavaScript 实例
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert("需要输入名字。");
+        return false;
+    }
+}
+以上 JavaScript 代码可以通过 HTML 代码来调用：
+HTML 表单实例
+&ltform name="myForm" action="demo_form.php" onsubmit="return validateForm()" method="post"&gt
+名字: &ltinput type="text" name="fname"&gt
+&ltinput type="submit" value="提交"&gt
+&lt/form&gt</pre>
+<script type="text/javascript">
+	function validateForm(){
+		var x = document.forms["myForm"]["fname"].value;
+		if (x == null || x == "") {
+			alert("需要输入名字。");
+			return false;
+		}
+	}
+</script>
+<form name="myForm" action="demo_form.php" onsubmit="return validateForm()" method="post">
+	<input type="text" name="fname">
+	<input type="submit" name="提交">
+</form>
+<hr>
+<h1>JavaScript验证输入的数字</h1>
+<p>请输入 1 到 10 之间的数字：</p>
+<input id="numb">
+<button onclick="myFunction()">提交</button>
+<p id="demo"></p>
+<script type="text/javascript">
+	function myFunction(){
+		var x, text;
+		x = document.getElementById('numb').value;
+		if (isNaN(x) || x < 1 || x > 10) {
+			text = "输入错误";
+		}else{
+			text = "输入正确";
+		}
+		document.getElementById("demo").innerHTML = text;
+	}
+</script>
+<hr>
+<h1>HTML表单自动验证</h1>
+<pre>HTML 表单验证也可以通过浏览器来自动完成。
+如果表单字段 (fname) 的值为空, required 属性会阻止表单提交：
+实例
+&ltform action="demo_form.php" method="post"&gt
+  &ltinput type="text" name="fname" required="required"&gt
+  &ltinput type="submit" value="提交"&gt
+&lt/form&gt</pre>
+<form action="demo_form.php" method="post">
+	<input type="text" name="fname" required="required">
+	<input type="submit" name="提交">
+</form>
+<hr>
+<h1>数据验证</h1>
+<pre>数据验证用于确保用户输入的数据是有效的。
+典型的数据验证有：
+<ul>
+	<li>必需字段是否有输入?</li>
+	<li>用户是否输入了合法的数据?</li>
+	<li>在数字字段是否输入了文本?</li>
+</ul>
+大多数情况下，数据验证用于确保用户正确输入数据。
+数据验证可以使用不同方法来定义，并通过多种方式来调用。
+服务端数据验证是在数据提交到服务器上后再验证。
+客户端数据验证 side validation是在数据发送到服务器前，在浏览器上完成验证。
+</pre>
+</body>
+</html>
