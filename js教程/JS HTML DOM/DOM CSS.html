@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM CSS</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>JavaScript HTML DOM - 改变CSS</h1>
+<hr>
+<p>HTML DOM 允许 JavaScript 改变 HTML 元素的样式。</p>
+<hr>
+<h1>改变 HTML 样式</h1>
+<pre>如需改变 HTML 元素的样式，请使用这个语法：
+document.getElementById(id).style.property=新样式
+下面的例子会改变 &ltp&gt 元素的样式：</pre>
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+<script type="text/javascript">
+	function changeStyle() {
+		// body...
+		document.getElementById("p1").style.color = "blue";
+		document.getElementById("p2").style.fontFamily = "Arial";
+	}
+</script>
+<button onclick="changeStyle()">改变样式</button>
+<hr>
+<h1>使用事件</h1>
+<pre>HTML DOM 允许我们通过触发事件来执行代码。
+比如以下事件：</pre>
+<ul>
+	<li>元素被点击。</li>
+	<li>页面加载完成。</li>
+	<li>输入框被修改。</li>
+	<li>......</li>
+</ul>
+</body>
+</html>
