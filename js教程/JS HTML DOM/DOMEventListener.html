@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript HTML DOM EventListener</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>JavaScript HTML DOM EventListener</h1>
+<hr>
+<h1>addEventListener() 方法</h1>
+<pre>
+在用户点击按钮时触发监听事件：
+document.getElementById("myBtn").addEventListener("click", displayDate);</pre>
+<button id="myBtn">点我</button>
+<p id="demo"></p>
+<script type="text/javascript">
+	document.getElementById("myBtn").addEventListener("click", displayDate);
+	function displayDate() {
+		// body...
+		document.getElementById("demo").innerHTML = Date();
+	}
+</script>
+<pre>addEventListener() 方法用于向指定元素添加事件句柄。
+addEventListener() 方法添加的事件句柄不会覆盖已存在的事件句柄。
+你可以向一个元素添加多个事件句柄。
+你可以向同个元素添加多个同类型的事件句柄，如：两个 "click" 事件。
+你可以向任何 DOM 对象添加事件监听，不仅仅是 HTML 元素。如： window 对象。
+addEventListener() 方法可以更简单的控制事件（冒泡与捕获）。
+当你使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制HTML标记时也可以添加事件监听。
+你可以使用 removeEventListener() 方法来移除事件的监听。</pre>
+<hr>
+<h1>语法</h1>
+<pre>element.addEventListener(event, function, useCapture);
+第一个参数是事件的类型 (如 "click" 或 "mousedown").
+第二个参数是事件触发后调用的函数。
+第三个参数是个布尔值用于描述事件是冒泡还是捕获。该参数是可选的。
+Note	注意:不要使用 "on" 前缀。 例如，使用 "click" ,而不是使用 "onclick"。</pre>
+<hr>
+<h1>向原元素添加事件句柄</h1>
+<button id="btn1">向原元素添加事件句柄</button>
+<script type="text/javascript">
+	document.getElementById("btn1").addEventListener("click", function() {
+		// body...
+		alert("Hello World!");
+	});
+</script>
+<hr>
+<h1>向同一个元素中添加多个事件句柄</h1>
+<p>addEventListener() 方法允许向同一个元素添加多个事件，且不会覆盖已存在的事件：</p>
+<button id="btn2">多个事件</button>
+<script type="text/javascript">
+	document.getElementById("btn2").addEventListener("click", event1);
+	document.getElementById("btn2").addEventListener("click", event2);
+	function event1(){
+		alert("event1");
+	}
+	function event2(){
+		alert("event2");
+	}
+</script>
+<p>你可以向同个元素添加不同类型的事件：</p>
+<button id="btn3">不同类型事件</button>
+<script type="text/javascript">
+	document.getElementById("btn3").addEventListener("mouseover", event3);
+	document.getElementById("btn3").addEventListener("click", event4);
+	document.getElementById("btn3").addEventListener("mouseout", event5);
+	function event3(){
+		alert("mouseover");
+	}
+	function event4(){
+		alert("click");
+	}
+	function event5(){
+		alert("mouseout");
+	}
+</script>
+<hr>
+<h1>向 Window 对象添加事件句</h1>
+<pre>addEventListener() 方法允许你在 HTML DOM 对象添加事件监听， HTML DOM 对象如： HTML 元素, HTML 文档, window 对象。或者其他支出的事件对象如: xmlHttpRequest 对象。</pre>
+<p id="windowsize"></p>
+<script type="text/javascript">
+	window.addEventListener("resize", function(){
+		document.getElementById("windowsize").innerHTML = Date();
+	});
+</script>
+<hr>
+<h1>传递参数</h1>
+<p>当传递参数值时，使用"匿名函数"调用带参数的函数：</p>
+<button id="btn4">点我</button>
+<p id="demo1"></p>
+<script>
+var p1 = 5;
+var p2 = 7;
+document.getElementById("btn4").addEventListener("click", function() {
+    myFunction(p1, p2);
+});
+function myFunction(a, b) {
+    var result = a * b;
+    document.getElementById("demo1").innerHTML = result;
+}
+</script>
+<hr>
+<h1>事件冒泡或事件捕获？</h1>
+<pre>事件传递有两种方式：冒泡与捕获。
+事件传递定义了元素事件触发的顺序。 如果你将 &ltp&gt 元素插入到 &ltdiv&gt 元素中，用户点击 &ltp&gt 元素, 哪个元素的 "click" 事件先被触发呢？
+在 冒泡 中，内部元素的事件会先被触发，然后再触发外部元素，即： &ltp&gt 元素的点击事件先触发，然后会触发 &ltdiv&gt 元素的点击事件。
+在 捕获 中，外部元素的事件会先被触发，然后才会触发内部元素的事件，即： &ltdiv&gt 元素的点击事件先触发 ，然后再触发 &ltp&gt 元素的点击事件。
+addEventListener() 方法可以指定 "useCapture" 参数来设置传递类型：
+addEventListener(event, function, useCapture);
+默认值为 false, 即冒泡传递，当值为 true 时, 事件使用捕获传递。</pre>
+<p>实例演示了在添加不同事件监听时，冒泡与捕获的不同。</p>
+<div id="myDiv" style="background-color: coral;
+    	border: 1px solid;
+    	padding: 50px;">
+	<p id="myP">点击段落，我是冒泡。</p>
+</div><br>
+<div id="myDiv2" style="background-color: coral;
+    	border: 1px solid;
+    	padding: 50px;">
+	<p id="myP2">点击段落，我是捕获。 </p>
+</div>
+<script>
+document.getElementById("myP").addEventListener("click", function() {
+    alert("你点击了 P 元素!");
+}, false);
+document.getElementById("myDiv").addEventListener("click", function() {
+    alert(" 你点击了 DIV 元素 !");
+}, false);
+document.getElementById("myP2").addEventListener("click", function() {
+    alert("你点击了 P2 元素!");
+}, true);
+document.getElementById("myDiv2").addEventListener("click", function() {
+    alert("你点击了 DIV2 元素 !");
+}, true);
+</script>
+<hr>
+<h1>removeEventListener() 方法</h1>
+<pre>removeEventListener() 方法移除由 addEventListener() 方法添加的事件句柄:
+element.removeEventListener("mousemove", myFunction);</pre>
+<hr>
+<h1>浏览器支持</h1>
+<pre>表格中的数字表示支持该方法的第一个浏览器的版本号。
+方法					
+addEventListener()	
+removeEventListener()	
+注意： IE 8 及更早 IE 版本，Opera 7.0及其更早版本不支持 addEventListener() 和 removeEventListener() 方法。但是，对于这类浏览器版本可以使用 detachEvent() 方法来移除事件句柄:
+element.attachEvent(event, function);
+element.detachEvent(event, function);</pre>
+</body>
+</html>
