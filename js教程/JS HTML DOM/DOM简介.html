@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript HTML DOM</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	p.intro{
+		color:red;
+	}
+	</style>
+</head>
+<body>
+<h1>JavaScript HTML DOM</h1>
+<hr>
+<p>通过 HTML DOM，可访问 JavaScript HTML 文档的所有元素。</p>
+<hr>
+<h1>HTML DOM (文档对象模型)</h1>
+<pre>当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。
+HTML DOM 模型被构造为对象的树：</pre>
+<img src="./images/pic_htmltree.gif" width="486" height="266">
+<p>通过可编程的对象模型，JavaScript 获得了足够的能力来创建动态的 HTML。</p>
+<ul>
+	<li>JavaScript 能够改变页面中的所有 HTML 元素</li>
+	<li>JavaScript 能够改变页面中的所有 HTML 属性</li>
+	<li>JavaScript 能够改变页面中的所有 CSS 样式</li>
+	<li>JavaScript 能够对页面中的所有事件做出反应</li>
+</ul>
+<hr>
+<h1>查找 HTML 元素</h1>
+<pre>通常，通过 JavaScript，您需要操作 HTML 元素。
+为了做到这件事情，您必须首先找到该元素。有三种方法来做这件事：</pre>
+<ul>
+	<li>通过 id 找到 HTML 元素</li>
+	<li>通过标签名找到 HTML 元素</li>
+	<li>通过类名找到 HTML 元素</li>
+</ul>
+<hr>
+<h1>通过 id 查找 HTML 元素</h1>
+<pre>在 DOM 中查找 HTML 元素的最简单的方法，是通过使用元素的 id。
+本例查找 id="intro" 元素：</pre>
+<p id="intro">intro</p>
+<script type="text/javascript">
+	function change() {
+		// body...
+		document.getElementById('intro').innerHTML = "aaa";
+	}
+</script>
+<button onclick="change()">click</button>
+<pre>如果找到该元素，则该方法将以对象（在 x 中）的形式返回该元素。
+如果未找到该元素，则 x 将包含 null。</pre>
+<hr>
+<h1>通过标签名查找 HTML 元素</h1>
+<pre>实例
+	var x=document.getElementById("main");
+	var y=x.getElementsByTagName("p");
+</pre>
+<script type="text/javascript">
+	var x = document.getElementById("main");
+	var y = document.getElementsByTagName("p");
+	console.log(y);
+</script>
+<hr>
+<h1>通过类名找到 HTML 元素</h1>
+<pre>var x=document.getElementsByClassName("intro");</pre>
+<p class="intro">hahahaha</p>
+<script type="text/javascript">
+	var p = document.getElementsByClassName("intro");
+	console.log(p);
+</script>
+</body>
+</html>
