@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTMLCollection对象</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>JavaScript HTML DOM 集合(Collection)</h1>
+<p>本章节介绍如何向文档中添加和移除元素(节点)。</p>
+<hr>
+<h1>HTMLCollection 对象</h1>
+<pre>getElementsByTagName() 方法返回 HTMLCollection 对象。
+HTMLCollection 对象类似包含 HTML 元素的一个数组。
+以下代码获取文档所有的 &ltp&gt 元素：
+实例
+var x = document.getElementsByTagName("p");
+集合中的元素可以通过索引(以 0 为起始位置)来访问。
+访问第二个 &ltp&gt 元素可以是以下代码:
+y = x[1];</pre>
+
+<script type="text/javascript">
+	var y = document.getElementsByTagName("p");
+	var p1 = y[0];
+	console.log(p1);
+</script>
+<hr>
+<h1>HTMLCollection 对象 length 属性</h1>
+<pre>HTMLCollection 对象的 length 属性定义了集合中元素的数量。
+实例
+var myCollection = document.getElementsByTagName("p");
+document.getElementById("demo").innerHTML = myCollection.length;</pre>
+<script type="text/javascript">
+	var myCollection = document.getElementsByTagName("p");
+	console.log(myCollection.length);
+</script>
+<pre>实例
+修改所有 &ltpre&gt 元素的背景颜色:
+var myCollection = document.getElementsByTagName("pre");
+var i;
+for (i = 0; i < myCollection.length; i++) {
+    myCollection[i].style.color = "red";
+}</pre>
+<script type="text/javascript">
+	var myCollection = document.getElementsByTagName("pre");
+	for(var i=0; i<myCollection.length; i++){
+		myCollection[i].style.color = "red";
+	}
+</script>
+<h2>注意</h2>
+<pre>HTMLCollection 不是一个数组！
+HTMLCollection 看起来可能是一个数组，但其实不是。
+你可以像数组一样，使用索引来获取元素。
+HTMLCollection 无法使用数组的方法： valueOf(), pop(), push(), 或 join() 。</pre>
+</body>
+</html>
