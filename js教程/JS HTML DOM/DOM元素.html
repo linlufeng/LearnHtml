@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM元素</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>JavaScript HTML DOM 元素 (节点)</h1>
+<p>本章节介绍如何向文档中添加和移除元素(节点)。</p>
+<hr>
+<h1>创建新的 HTML 元素 (节点) - appendChild()</h1>
+<p>要创建新的 HTML 元素 (节点)需要先创建一个元素，然后在已存在的元素中添加它。</p>
+<div id="div1">
+	<p id="p1">这是一个段落。</p>
+	<p id="p2">这是另外一个段落。</p>
+</div>
+<script type="text/javascript">
+var para = document.createElement("p");
+var node = document.createTextNode("这是一个新段落。");
+para.appendChild(node);
+
+var element = document.getElementById('div1');
+element.appendChild(para);
+</script>
+<pre>实例解析
+以下代码是用于创建 &ltp&gt 元素:
+var para = document.createElement("p");
+为 &ltp&gt 元素创建一个新的文本节点：
+var node = document.createTextNode("这是一个新的段落。");
+将文本节点添加到 &ltp&gt 元素中：
+para.appendChild(node);
+最后，在一个已存在的元素中添加 p 元素。
+查找已存在的元素：
+var element = document.getElementById("div1");
+添加到已存在的元素中:
+element.appendChild(para);</pre>
+<hr>
+<h1>创建新的 HTML 元素 (节点) - insertBefore()</h1>
+<pre>以上的实例我们使用了 appendChild() 方法，它用于添加新元素到尾部。
+如果我们需要将新元素添加到开始位置，可以使用 insertBefore() 方法:</pre>
+<div id="div2">
+	<p id="p3">这是一个段落。</p>
+	<p id="p4">这是另外一个段落。</p>
+</div>
+<script type="text/javascript">
+var para = document.createElement("p");
+var node = document.createTextNode("这是一个新的段落。");
+para.appendChild(node);
+
+var element = document.getElementById("div2");
+var child = document.getElementById("p3");
+element.insertBefore(para, child);
+</script>
+<hr>
+<h1>移除已存在的元素-removeChild</h1>
+<p>要移除一个元素，你需要知道该元素的父元素。</p>
+<div id="div3">
+<p id="p5">这是一个段落。</p>
+<p id="p6">这是另外一个段落。</p>
+</div>
+<script type="text/javascript">
+	var parent = document.getElementById("div3");
+	var child = document.getElementById("p5");
+	parent.removeChild(child);
+</script>
+<p>注意：早期的 Internet Explorer 浏览器不支持 node.remove() 方法。</p>
+<hr>
+<h1>替换 HTML 元素 - replaceChild()</h1>
+<p>我们可以使用 replaceChild() 方法来替换 HTML DOM 中的元素。</p>
+<div id="div4">
+<p id="p7">这是一个段落。</p>
+<p id="p8">这是另一个段落。</p>
+<script type="text/javascript">
+var para = document.createElement("p");
+var node = document.createTextNode("这是一个新的段落。");
+para.appendChild(node);
+var parent = document.getElementById("div4");
+var child = document.getElementById("p7");
+parent.replaceChild(para, child);
+</script>
+</div>
+</body>
+</html>
