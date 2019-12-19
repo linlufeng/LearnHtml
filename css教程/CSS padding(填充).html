@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS padding (填充)</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		p.padding{
+			padding-top: 25px;
+			padding-bottom: 25px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	</style>
+</head>
+<body>
+<h1>CSS padding (填充)</h1>
+<hr>
+<p>CSS padding (填充) 是一个简写属性，定义元素边框与元素内容之间的空间，即上下左右内边距。</p>
+<hr>
+<h1>padding (填充)</h1>
+<pre>当元素的 padding（填充）内边距被清除时，所释放的区域将会受到元素背景颜色的填充。
+单独使用 padding 属性可以改变上下左右的填充。</pre>
+<img src="./images/VlwVi.png" width="600" height="300">
+<h1>可能的值</h1>
+<table>
+	<tr>
+		<th>值</th>
+		<th>说明</th>
+	</tr>
+	<tr>
+		<td>length</td>
+		<td>定义一个固定的填充（像素，pt，em，等）</td>
+	</tr>
+</table>
+<hr>
+<h1>填充- 单边内边距属性</h1>
+<p>在CSS中，它可以指定不同的侧面不同的填充：</p>
+<p>这是一个没有指定填充边距的段落。</p>
+<p class="padding">这是一个指定填充边距的段落。</p>
+<hr>
+<h1>填充 - 简写属性</h1>
+<pre>为了缩短代码，它可以在一个属性中指定的所有填充属性。
+这就是所谓的简写属性。所有的填充属性的简写属性是 padding :
+Padding属性，可以有一到四个值。</pre>
+<b>padding:25px 50px 75px 100px;</b>
+<ul>
+	<li>上填充为25px</li>
+	<li>右填充为50px</li>
+	<li>下填充为75px</li>
+	<li>左填充为100px</li>
+</ul>
+<b>padding:25px 50px 75px;</b>
+<ul>
+	<li>上填充为25px</li>
+	<li>左右填充为50px</li>
+	<li>下填充为75px</li>
+</ul>
+<b>padding:25px 50px;</b>
+<ul>
+	<li>上下填充为25px</li>
+	<li>左右填充为50px</li>
+</ul>
+<b>padding:25px;</b>
+<ul>
+	<li>所有的填充都是25px</li>
+</ul>
+</body>
+</html>
