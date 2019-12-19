@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 尺寸 (Dimension)</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	img.normal{
+		height: auto;
+	}
+	img.big{
+		height: 120px;
+	}
+	p.ex{
+		height: 100px;
+		width:100px;
+	}
+
+	html {height:100%;}
+	body {height:100%;}
+	img.normal1 {height:auto;}
+	img.big1 {height:50%;}
+	img.small1 {height:10%;}
+
+	img.width{
+		width: 200px;
+	}
+	p.maxheight{
+		max-height: 50px;
+		background-color: yellow;
+	}
+	p.maxwidth{
+		max-width: 20%;
+		background-color: yellow;
+	}
+	p.minheight{
+		min-height:100px;
+		background-color:yellow;
+	}
+	p.minwidth{
+		min-width:150px;
+		background-color:yellow;
+	}
+</style>
+</head>
+<body>
+	<h1>CSS 尺寸 (Dimension)</h1>
+	<hr>
+	<p>CSS 尺寸 (Dimension) 属性允许你控制元素的高度和宽度。同样，它允许你增加行间距。</p>
+	<hr>
+	<h2>设置元素的高度</h2>
+	<img class="normal" src="./images/logocss.gif" width="95" height="84"><br>
+	<img class="big" src="./images/logocss.gif" width="95" height="84">
+	<p class="ex" style="background-color: red;">这个段落的高和宽是 100px.</p>
+	<hr>
+	<h2>使用百分比设置图像的高度</h2>
+	<img class="normal1" src="./images/logocss.gif" width="95" height="84"><br>
+	<img class="big1" src="./images/logocss.gif" width="95" height="84"><br>
+	<img class="small1" src="./images/logocss.gif" width="95" height="84">
+	<h2>使用像素值来设置元素的宽度</h2>
+	<img class="width" src="./images/logocss.gif" width="95" height="84">
+	<h2>设置元素的最大高度</h2>
+	<p class="maxheight">本段落的最大高度被设置为 50px。 本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。本段落的最大高度被设置为 50px。</p>
+	<h2>使用百分比来设置元素的最大宽度</h2>
+	<p class="maxwidth">This is some text. This is some text. This is some text.
+		This is some text. This is some text. This is some text.
+	This is some text. This is some text. This is some text.</p>
+	<h2>设置元素的最低高度</h2>
+	<p class="minheight">这段的最小高度设置为100 px。</p>
+	<h2>使用像素值设置元素的最小宽度</h2>
+	<p class="minwidth">这个段落的最小宽度设置为 150px。</p>
+	<hr>
+	<table border="1">
+		<tr>
+			<th width="200">属性</th>
+			<th width="400">描述</th>
+		</tr>
+		<tr>
+			<td>height</td>
+			<td>设置元素的高度。</td>
+		</tr>
+		<tr>
+			<td>line-height</td>
+			<td>设置行高。</td>
+		</tr>
+		<tr>
+			<td>max-height</td>
+			<td>设置元素的最大高度。</td>
+		</tr>
+		<tr>
+			<td>max-width</td>
+			<td>设置元素的最大宽度。</td>
+		</tr>
+		<tr>
+			<td>min-height</td>
+			<td>设置元素的最小高度。</td>
+		</tr>
+		<tr>
+			<td>min-width</td>
+			<td>设置元素的最小宽度。</td>
+		</tr>
+		<tr>
+			<td>width</td>
+			<td>设置元素的宽度。</td>
+		</tr>
+	</table>
+</body>
+</html>
