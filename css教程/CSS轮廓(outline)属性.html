@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 轮廓（outline）</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	p.s1{
+		border: 1px solid red;
+		outline: green dotted thick;
+	}
+
+	p {border:1px solid red;}
+	p.dotted {outline-style:dotted;}
+	p.dashed {outline-style:dashed;}
+	p.solid {outline-style:solid;}
+	p.double {outline-style:double;}
+	p.groove {outline-style:groove;}
+	p.ridge {outline-style:ridge;}
+	p.inset {outline-style:inset;}
+	p.outset {outline-style:outset;}
+	p.outlinecolor{outline-color: #ff00ff;}
+	p.outlinewidth{outline-width: 10px;}
+	td{
+		text-align: center;
+	}
+	li{
+		list-style: none;
+	}
+</style>
+</head>
+<body>
+	<h1>CSS 轮廓（outline）</h1>
+	<hr>
+	<pre>轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。
+	轮廓（outline）属性指定元素轮廓的样式、颜色和宽度。</pre>
+	<hr>
+	<p>本例演示使用outline属性在元素周围画一条线。</p>
+	<p class="s1"><b>注意:</b> 如果只有一个 !DOCTYP E指定 IE8 支持 outline 属性。</p>
+	<p>本例演示如何设置轮廓的样式。</p>
+	<p class="dotted">点线轮廓</p>
+	<p class="dashed">虚线轮廓</p>
+	<p class="solid">实线轮廓</p>
+	<p class="double">双线轮廓</p>
+	<p class="groove">凹槽轮廓</p>
+	<p class="ridge">垄状轮廓</p>
+	<p class="inset">嵌入轮廓</p>
+	<p class="outset">外凸轮廓</p>
+	<p>本例演示如何设置轮廓的颜色。</p>
+	<p class="outlinecolor">本例演示如何设置轮廓的颜色。</p>
+	<p>本例演示如何设置轮廓的宽度。</p>
+	<p class="outlinewidth">本例演示如何设置轮廓的宽度。</p>
+	<hr>
+	<h1>CSS 轮廓（outline）</h1>
+	<pre>轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。
+CSS outline 属性规定元素轮廓的样式、颜色和宽度。</pre>
+	<img src="./images/box_outline.gif" width="536" height="289">
+	<hr>
+	<h1>所有CSS 轮廓（outline）属性</h1>
+	<p>"CSS" 列中的数字表示哪个CSS版本定义了该属性(CSS1 或者CSS2)。</p>
+	<table width="100%" border="1.0" style="border-style:solid;">
+		<tr>
+			<th width="25%">属性</th>
+			<th width="25%">说明</th>
+			<th width="25%">值</th>
+			<th width="25%">CSS</th>
+		</tr>
+		<tr>
+			<td>outline</td>
+			<td>在一个声明中设置所有的轮廓属性</td>
+			<td>
+				<ul>
+					<li>outline-color</li>
+					<li>outline-style</li>
+					<li>outline-width</li>
+					<li>inherit</li>
+				</ul>
+			</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>outline-color</td>
+			<td>设置轮廓的颜色</td>
+			<td>
+				<ul>
+					<li>color-name</li>
+					<li>hex-number</li>
+					<li>rgb-number</li>
+					<li>invert</li>
+					<li>inherit</li>
+				</ul>
+			</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>outline-style</td>
+			<td>设置轮廓的样式</td>
+			<td>
+				<ul>
+					<li>none</li>
+					<li>dotted</li>
+					<li>dashed</li>
+					<li>solid</li>
+					<li>double</li>
+					<li>groove</li>
+					<li>ridge</li>
+					<li>inset</li>
+					<li>outset</li>
+					<li>inherit</li>
+				</ul>
+			</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>outline-width</td>
+			<td>设置轮廓的宽度</td>
+			<td>
+				<ul>
+					<li>thin</li>
+					<li>medium</li>
+					<li>thick</li>
+					<li>length</li>
+					<li>inherit</li>
+				</ul>
+			</td>
+			<td>2</td>
+		</tr>
+	</table>
+</body>
+</html>
