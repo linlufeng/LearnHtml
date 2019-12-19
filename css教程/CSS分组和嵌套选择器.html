@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 分组 和 嵌套 选择器</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		h1, h2, p{
+			color: red;
+		}
+		p{
+			color: blue;
+			text-align: center;
+		}
+		.marked{
+			background-color: red;
+		}
+		.marker p{
+			color: white;
+		}
+		p.marked{
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+<h1>CSS 分组 和 嵌套 选择器</h1>
+<hr>
+<h2>分组选择器</h2>
+<pre>在样式表中有很多具有相同样式的元素。
+h1
+{
+    color:green;
+}
+h2
+{
+    color:green;
+}
+p
+{
+    color:green;
+}
+为了尽量减少代码，你可以使用分组选择器。
+每个选择器用逗号分隔。
+在下面的例子中，我们对以上代码使用分组选择器：
+实例
+h1,h2,p
+{
+    color:green;
+}</pre>
+<hr>
+<h2>嵌套选择器</h2>
+<pre>它可能适用于选择器内部的选择器的样式。
+在下面的例子设置了三个样式：</pre>
+<ul>
+	<li><b>p{ }</b>: 为所有 p 元素指定一个样式。</li>
+	<li><b>.marked{ }</b>: 为所有 class="marked" 的元素指定一个样式。</li>
+	<li><b>.marked p{ }</b>: 为所有 class="marked" 元素内的 p 元素指定一个样式。</li>
+	<li><b>p.marked{ }</b>: 为所有 class="marked" 的 p 元素指定一个样式。</li>
+</ul>
+
+<p>这个段落是蓝色文本，居中对齐。</p>
+<div class="marked">
+<p>这个段落不是蓝色文本。</p>
+</div>
+<p>所有 class="marked"元素内的 p 元素指定一个样式，但有不同的文本颜色。</p>
+	
+<p class="marked">带下划线的 p 段落。</p>
+</body>
+</html>
