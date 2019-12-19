@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS margin(外边距)</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		p.margin{
+			margin-top: 100px;
+			margin-bottom: 100px;
+			margin-right: 50px;
+			margin-left: 50px;
+		}
+	</style>
+</head>
+<body>
+<h1>CSS margin(外边距)</h1>
+<hr>
+<p>CSS margin(外边距)属性定义元素周围的空间</p>
+<hr>
+<h1>margin</h1>
+<pre>margin 清除周围的（外边框）元素区域。margin 没有背景颜色，是完全透明的。
+margin 可以单独改变元素的上，下，左，右边距，也可以一次改变所有的属性。</pre>
+<img src="./images/VlwVi.png" width="600" height="300">
+<h1>可能的值</h1>
+<table>
+	<tr>
+		<th>值</th>
+		<th>说明</th>
+	</tr>
+	<tr>
+		<td>auto</td>
+		<td>
+			<ul>
+				<li>设置浏览器边距。</li>
+				<li>这样做的结果会依赖于浏览器</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>length</td>
+		<td>定义一个固定的margin（使用像素，pt，em等）</td>
+	</tr>
+	<tr>
+		<td>%</td>
+		<td>定义一个使用百分比的边距</td>
+	</tr>
+</table>
+<p>Margin可以使用负值，重叠的内容。</p>
+<hr>
+<h1>Margin - 单边外边距属性</h1>
+<p>在CSS中，它可以指定不同的侧面不同的边距：</p>
+<pre>实例
+margin-top:100px;
+margin-bottom:100px;
+margin-right:50px;
+margin-left:50px;</pre>
+<p>这是一个没有指定边距大小的段落。</p>
+<p class="margin">这是一个指定边距大小的段落。</p>
+<hr>
+<h1>Margin - 简写属性</h1>
+<pre>为了缩短代码，有可能使用一个属性中margin指定的所有边距属性。这就是所谓的简写属性。
+所有边距属性的简写属性是 margin :
+margin属性可以有一到四个值。</pre>
+<ul>
+	<li>margin:25px 50px 75px 100px;</li>
+	<li>
+		<ul>
+			<li>上边距为25px</li>
+			<li>左边距为50px</li>
+			<li>下边距为75px</li>
+			<li>右边距为100px</li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>margin:25px 50px 75px;</li>
+	<li>
+		<ul>
+			<li>上边距为25px</li>
+			<li>左边距为50px</li>
+			<li>下边距为75px</li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>margin:25px 50px;</li>
+	<li>
+		<ul>
+			<li>上边距为25px</li>
+			<li>左边距为50px</li>
+		</ul>
+	</li>
+</ul>
+
+<ul>
+	<li>margin:25px;</li>
+	<li>
+		<ul>
+			<li>所有的4个边距都是25px</li>
+		</ul>
+	</li>
+</ul>
+</body>
+</html>
