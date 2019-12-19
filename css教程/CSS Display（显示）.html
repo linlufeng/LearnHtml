@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Display显示</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	.imgbox {
+		float: left;
+		text-align: center;
+		width: 120px;
+		height: 135px;
+		border: 1px solid gray;
+		margin: 4px;
+		padding: 0px;
+	}
+	h1.hidden{
+		visibility: hidden;
+	}
+	h2.hidden{
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<h1>CSS Display(显示) 与 Visibility（可见性）</h1>
+	<hr>
+	<p>display属性设置一个元素应如何显示，visibility属性指定一个元素应可见还是隐藏。</p>
+	<div style="text-align: center;">
+		<div style="width: 392px;height: 150px;margin-left: auto;margin-right: auto;text-align: left;border: 1px solid gray">
+			<div class="imgbox">box1<br>
+				<img src="./images/klematis_small.jpg" width="107" height="90">
+			</div>
+			<div class="imgbox">box2<br>
+				<img src="./images/klematis2_small.jpg" width="107" height="80">
+			</div>
+			<div class="imgbox">box3<br>
+				<img src="./images/klematis3_small.jpg" width="116" height="90">
+			</div>
+		</div>
+	</div>
+	<hr>
+	<h1>隐藏元素 - display:none或visibility:hidden</h1>
+	<pre>隐藏一个元素可以通过把display属性设置为"none"，或把visibility属性设置为"hidden"。但是请注意，这两种方法会产生不同的结果。
+		visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局。
+		实例
+		h1.hidden {visibility:hidden;}
+
+		
+		display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失。
+		实例
+		h1.hidden {display:none;}</pre>
+	<h1 class="hidden">aaaaaaaa</h1>
+	<h2 class="hidden">adsdadasdsad</h2>
+	<hr>
+	<h1>CSS Display - 块和内联元素</h1>
+	<pre>块元素是一个元素，占用了全部宽度，在前后都是换行符。
+块元素的例子：</pre>
+	<ul>
+		<li>&lth1&gt</li>
+		<li>&ltp&gt</li>
+		<li>&ltdiv&gt</li>
+	</ul>
+	<pre>内联元素只需要必要的宽度，不强制换行。
+内联元素的例子：</pre>
+	<ul>
+		<li>&ltspan&gt</li>
+		<li>&lta&gt</li>
+	</ul>
+	<p>注意：变更元素的显示类型看该元素是如何显示，它是什么样的元素。例如：一个内联元素设置为display:block是不允许有它内部的嵌套块元素。</p>
+</body>
+</html>
