@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Float（浮动）</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	img.right
+	{
+		float:right;
+	}
+
+	.thumbnail 
+	{
+		float:left;
+		width:110px;
+		height:90px;
+		margin:5px;
+	}
+</style>
+</head>
+<body>
+	<h1>CSS Float(浮动)</h1>
+	<hr>
+	<h1>什么是CSS Float(浮动)？</h1>
+
+	
+	<img class="thumbnail" src="./images/klematis_small.jpg" width="95" height="84">
+	<img class="thumbnail" src="./images/klematis2_small.jpg" width="95" height="84">
+	<img class="thumbnail" src="./images/klematis3_small.jpg" width="95" height="84">
+	
+
+	<pre style="clear: both;">CSS 的 Float（浮动），会使元素向左或向右移动，其周围的元素也会重新排列。
+	Float（浮动），往往是用于图像，但它在布局时一样非常有用。</pre>
+	<hr>
+	<h2>元素怎样浮动</h2>
+	<pre>元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。
+		一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。
+		浮动元素之后的元素将围绕它。
+		浮动元素之前的元素将不会受到影响。
+		如果图像是右浮动，下面的文本流将环绕在它左边：
+		实例
+		img
+		{
+			float:right;
+		}</pre>
+
+		<p>在下面的段落中，我们添加了一个 <b>float:right</b> 的图片。导致图片将会浮动在段落的右边。</p>
+		<p>
+			<img class="right" src="./images/logocss.gif" width="95" height="84" />
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+			这是一些文本。这是一些文本。这是一些文本。
+		</p>
+	</body>
+	</html>
