@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Position（定位）</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div.static{
+			position: static;
+			border: 3px solid #73AD21;
+		}
+		p.pos_fixed{
+			position: fixed;
+			top: 30px;
+			right: 5px;
+		}
+		h2.pos_left{
+			position: relative;
+			left: -20px;
+		}
+		h2.pos_right{
+			position: relative;
+			left: 20px;
+		}
+		h2.absolute{
+			position: absolute;
+			left: 100px;
+			top: 150px;
+		}
+		div.sticky{
+			position: -webkit-sticky;
+			top: 0;
+			background-color: green;
+			border: 2px solid #4CAF50;
+		}
+		img.z{
+			position: relative;
+			left: 0px;
+			bottom: 50px;
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+<h1>CSS Position（定位）</h1>
+<hr>
+<pre>position 属性指定了元素的定位类型。
+position 属性的五个值：</pre>
+<ul>
+	<li>static</li>
+	<li>relative</li>
+	<li>fixed</li>
+	<li>absolute</li>
+	<li>sticky</li>
+</ul>
+<p>元素可以使用的顶部，底部，左侧和右侧属性定位。然而，这些属性无法工作，除非是先设定position属性。他们也有不同的工作方式，这取决于定位方法。</p>
+<hr>
+<h2>static定位</h2>
+<pre>HTML 元素的默认值，即没有定位，遵循正常的文档流对象。
+静态定位的元素不会受到 top, bottom, left, right影响。
+实例
+div.static {
+    position: static;
+    border: 3px solid #73AD21;
+}</pre>
+<div class="static">该元素使用了 position: static;</div>
+<hr>
+<h2>fixed 定位</h2>
+<pre>元素的位置相对于浏览器窗口是固定位置。
+即使窗口是滚动的它也不会移动：
+实例
+p.pos_fixed
+{
+    position:fixed;
+    top:30px;
+    right:5px;
+}
+
+注意： Fixed 定位在 IE7 和 IE8 下需要描述 !DOCTYPE 才能支持。
+Fixed定位使元素的位置与文档流无关，因此不占据空间。
+Fixed定位的元素和其他元素重叠。</pre>
+<p class="pos_fixed">Some more text</p>
+<hr>
+<h2>relative 定位</h2>
+<p>相对定位元素的定位是相对其正常位置。</p>
+<pre>实例
+h2.pos_left
+{
+    position:relative;
+    left:-20px;
+}
+h2.pos_right
+{
+    position:relative;
+    left:20px;
+}
+
+移动相对定位元素，但它原本所占的空间不会改变。
+实例
+h2.pos_top
+{
+    position:relative;
+    top:-50px;
+}
+
+相对定位元素经常被用来作为绝对定位元素的容器块。</pre>
+<h2 class="pos_left">这个标题相对于其正常位置向左移动</h2>
+<h2 class="pos_right">这个标题相对于其正常位置向右移动</h2>
+<hr>
+<h2>absolute 定位</h2>
+<pre>绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于&lthtml&gt:
+实例
+h2
+{
+    position:absolute;
+    left:100px;
+    top:150px;
+}
+
+absolute 定位使元素的位置与文档流无关，因此不占据空间。
+absolute 定位的元素和其他元素重叠。</pre>
+<h2 class="absolute">这是一个绝对定位了的标题</h2>
+<hr>
+<h2>sticky 定位</h2>
+<pre>sticky 英文字面意思是粘，粘贴，所以可以把它称之为粘性定位。
+position: sticky; 基于用户的滚动位置来定位。
+粘性定位的元素是依赖于用户的滚动，在 position:relative 与 position:fixed 定位之间切换。
+它的行为就像 position:relative; 而当页面滚动超出目标区域时，它的表现就像 position:fixed;，它会固定在目标位置。
+元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位。
+这个特定阈值指的是 top, right, bottom 或 left 之一，换言之，指定 top, right, bottom 或 left 四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。
+实例
+div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+}
+</pre>
+<div class="sticky">我是粘性定位!</div>
+
+<div style="padding-bottom:1000px; background-color: yellow;">
+  <p>滚动我</p>
+  <p>来回滚动我</p>
+  <p>滚动我</p>
+  <p>来回滚动我</p>
+  <p>滚动我</p>
+  <p>来回滚动我</p>
+</div>
+<hr>
+<h2>重叠的元素</h2>
+<pre>元素的定位与文档流无关，所以它们可以覆盖页面上的其它元素
+z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前面，或后面）
+一个元素可以有正数或负数的堆叠顺序：
+实例
+img
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:-1;
+}
+
+具有更高堆叠顺序的元素总是在较低的堆叠顺序元素的前面。
+注意： 如果两个定位元素重叠，没有指定z - index，最后定位在HTML代码中的元素将被显示在最前面。</pre>
+
+<h1>This is a heading</h1>
+<img class="z" src="./images/1.gif" width="100" height="100" />
+<p>因为图像元素设置了 z-index 属性值为 -1, 所以它会显示在文字之后。</p>
+
+</body>
+</html>
