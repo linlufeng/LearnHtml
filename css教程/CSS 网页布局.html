@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS 网页布局</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+	* {
+		box-sizing: border-box;
+	}
+	body{
+		font-family: Arial;
+ 		 padding: 10px;
+ 		 background: #f1f1f1;
+	}
+
+	.header{
+		background-color: #f1f1f1;
+		padding: 20px;
+		text-align: center;
+	}
+
+	.topnav{
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	.topnav a{
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	.topnav a:hover{
+		background-color: #ddd;
+		color: black;
+	}
+
+	.column{
+		float: left;
+		width: 33.33%;
+	}
+
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* 底部 */
+	.footer {
+		padding: 20px;
+		text-align: center;
+		background: #ddd;
+		margin-top: 20px;
+	}
+
+	/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+	@media screen and (max-width: 800px) {
+		.leftcolumn, .rightcolumn {   
+			width: 100%;
+			padding: 0;
+		}
+	}
+
+	/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+	@media screen and (max-width: 400px) {
+		.topnav a {
+			float: none;
+			width: 100%;
+		}
+	}
+</style>
+</head>
+<body>
+	<h1>CSS 网页布局</h1>
+	<h2>网页布局</h2>
+	<p>网页布局有很多种方式，一般分为以下几个部分：<b>头部区域、菜单导航区域、内容区域、底部区域。</b></p>
+	<img src="./images/6.jpg" width="971" height="491">
+
+	<div class="header">
+		<h1>头部区域</h1>
+	</div>
+
+	<div class="topnav">
+		<a href="">链接</a>
+		<a href="">链接</a>
+		<a href="">链接</a>
+	</div>
+
+	<div class="row">
+		<div class="column">
+			<h2>第一列</h2>
+			<p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+		</div>
+
+		<div class="column">
+			<h2>第二列</h2>
+			<p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+		</div>
+
+		<div class="column">
+			<h2>第三列</h2>
+			<p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+		</div>
+	</div>
+
+	<div class="footer">
+  		<h2>底部区域</h2>
+	</div>
+</body>
+</html>
