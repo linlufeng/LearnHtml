@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS组合选择符</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*后代选择器(以空格分隔)*/
+/*		div p{
+			background-color: yellow;
+		}*/
+		/*子元素选择器(以大于号分隔）*/
+		/*div>p{
+			background-color: yellow;
+		}*/
+		/*相邻兄弟选择器*/
+/*		div+p{
+  			background-color:yellow;
+		}*/
+		/*后续兄弟选择器*/
+		div~p{
+  			background-color:yellow;
+		}
+	</style>
+</head>
+<body>
+<h1>CSS 组合选择符</h1>
+<pre>组合选择符说明了两个选择器直接的关系。
+CSS组合选择符包括各种简单选择符的组合方式。
+在 CSS3 中包含了四种组合方式:</pre>
+<ul>
+	<li>后代选择器(以空格分隔)</li>
+	<li>子元素选择器(以大于号分隔）</li>
+	<li>相邻兄弟选择器（以加号分隔）</li>
+	<li>普通兄弟选择器（以破折号分隔）</li>
+</ul>
+<hr>
+<h1>后代选择器</h1>
+<pre>后代选择器用于选取某元素的后代元素。
+以下实例选取所有 <p> 元素插入到 <div> 元素中: 
+实例
+div p
+{
+  background-color:yellow;
+}</pre>
+<div>
+	<p>p 在div中</p>
+</div>
+<p>p 不在div中</p>
+<hr>
+<h1>子元素选择器</h1>
+<pre>与后代选择器相比，子元素选择器（Child selectors）只能选择作为某元素子元素的元素。
+以下实例选择了&ltdiv&gt元素中所有直接子元素 &ltp&gt ：
+实例
+div>p
+{
+  background-color:yellow;
+}</pre>
+
+<h1>Welcome to My Homepage</h1>
+<div>
+<h2>My name is Donald</h2>
+<p>I live in Duckburg.</p>
+</div>
+
+<div>
+<span><p>I will not be styled.</p></span>
+</div>
+
+<p>My best friend is Mickey.</p>
+<hr>
+<h1>相邻兄弟选择器</h1>
+<pre>相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素。
+如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器（Adjacent sibling selector）。
+以下实例选取了所有位于 &ltdiv&gt 元素后的第一个 &ltp&gt 元素:</pre>
+<div>
+<h2>DIV 内部标题</h2>
+<p>DIV 内部段落。</p>
+</div>
+
+<p>DIV 之后的第一个 P 元素。</p>
+
+<p>DIV 之后的第二个 P 元素。</p>
+<hr>
+<h1>后续兄弟选择器</h1>
+<pre>后续兄弟选择器选取所有指定元素之后的相邻兄弟元素。
+以下实例选取了所有 &ltdiv&gt 元素之后的所有相邻兄弟元素 &ltp&gt : </pre>
+<div>
+<p>段落 1。 在 div 中。</p>
+<p>段落 2。 在 div 中。</p>
+</div>
+
+<p>段落 3。不在 div 中。</p>
+<p>段落 4。不在 div 中。</p>
+</body>
+</html>
