@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS计数器</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	p, ul{
+		color: gray;
+	}
+	body {
+		counter-reset: section;
+	}
+
+	h1 {
+		counter-reset: subsection;
+	}
+
+	h1::before {
+		counter-increment: section;
+		content: "Section " counter(section) ". ";
+	}
+
+	h2::before {
+		counter-increment: subsection;
+		content: counter(section) "." counter(subsection) " ";
+	}		
+</style>
+</head>
+<body>
+	<h1>CSS计数器</h1>
+	<p>CSS 计数器通过一个变量来设置，根据规则递增变量。</p>
+	<hr>
+	<h2>使用计数器自动编号</h2>
+	<p>CSS 计数器根据规则来递增变量。</p>
+	<p>CSS 计数器使用到以下几个属性：</p>
+	<ul>
+		<li>counter-reset - 创建或者重置计数器</li>
+		<li>counter-increment - 递增变量</li>
+		<li>content - 插入生成的内容</li>
+		<li>counter() 或 counters() 函数 - 将计数器的值添加到元素</li>
+	</ul>
+	<p>要使用 CSS 计数器，得先用 counter-reset 创建：</p>
+	<p>以下实例在页面创建一个计数器 (在 body 选择器中)，每个 &lth2&gt 元素的计数值都会递增，并在每个 &lth2&gt 元素前添加 "Section <计数值>:"</p>
+
+	<h1>HTML 教程:</h1>
+	<h2>HTML 教程</h2>
+	<h2>CSS 教程</h2>
+
+	<h1>Scripting 教程:</h1>
+	<h2>JavaScript</h2>
+	<h2>VBScript</h2>
+
+	<h1>XML 教程:</h1>
+	<h2>XML</h2>
+	<h2>XSL</h2>
+
+	<p><b>注意:</b> IE8 需要指定 !DOCTYPE 才可以支持该属性。</p>
+
+</body>
+</html>
