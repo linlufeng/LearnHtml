@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS导航栏</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #f1f1f1;
+		border: 1px solid #555;
+	}
+
+	li {
+		display: line;
+	}
+	li a{
+		display: block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+	li {
+		text-align: center;
+		border-bottom: 1px solid #555;
+	}
+	li:last-child{
+		border-bottom: none;;
+	}
+	li a.active{
+		background-color: #4caf50;
+		color: white;
+	}
+	li a:hover:not(.active){
+		background-color: #555;
+		color: white;
+	}
+
+	ul.h 
+	{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	li.hh 
+	{
+		display:inline;
+	}
+</style>
+</head>
+<body>
+	<h1>导航栏</h1>
+	<pre>熟练使用导航栏，对于任何网站都非常重要。
+	使用CSS你可以转换成好看的导航栏而不是枯燥的HTML菜单。</pre>
+	<hr>
+	<h1>导航栏=链接列表</h1>
+	<pre>作为标准的HTML基础一个导航栏是必须的
+		。在我们的例子中我们将建立一个标准的HTML列表导航栏。
+	导航条基本上是一个链接列表，所以使用 &ltul&gt 和 &ltli&gt元素非常有意义：</pre>
+
+	<h1>垂直</h1>
+	<ul>
+		<li><a class="active" href="#home">主页</a></li>
+		<li><a href="#news">新闻</a></li>
+		<li><a href="#contact">联系</a></li>
+		<li><a href="#about">关于</a></li>
+	</ul>
+	<h1>水平</h1>
+	<ul class="h">
+		<li class="hh"><a href="#home">主页</a></li>
+		<li class="hh"><a href="#news">新闻</a></li>
+		<li class="hh"><a href="#contact">联系</a></li>
+		<li class="hh"><a href="#about">关于</a></li>
+	</ul>
+
+</body>
+</html>

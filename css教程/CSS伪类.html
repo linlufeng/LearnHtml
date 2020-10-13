@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS伪类</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		a:link {color: #000000;}	/*未访问的链接*/
+		a:visited {color: #00ff00;}	/*已访问的链接*/
+		a:hover {color: #ff00ff;}	/*鼠标移动到链接上*/
+		a:active {color: #0000ff;}	/*鼠标点击时*/
+		a.red:link {color: #000000;}
+		a.red:visited {color: #ff0000;}
+	</style>
+</head>
+<body>
+<h1>CSS <span style="color: green;">伪类(Pseudo-classes)</span></h1>
+<hr>
+<p>CSS伪类是用来添加一些选择器的特殊效果。</p>
+<hr>
+<h1>语法</h1>
+<pre>伪类的语法：
+selector:pseudo-class {property:value;}
+CSS类也可以使用伪类：
+selector.class:pseudo-class {property:value;}</pre>
+<hr>
+<h1>anchor伪类</h1>
+<pre>在支持 CSS 的浏览器中，链接的不同状态都可以以不同的方式显示
+实例
+a:link {color:#FF0000;} /* 未访问的链接 */
+a:visited {color:#00FF00;} /* 已访问的链接 */
+a:hover {color:#FF00FF;} /* 鼠标划过链接 */
+a:active {color:#0000FF;} /* 已选中的链接 */
+
+注意： 在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+注意： 在 CSS 定义中，a:active 必须被置于 a:hover 之后，才是有效的。
+注意：伪类的名称不区分大小写。</pre>
+<a href="https://www.baidu.com">www.baidu.com</a><br>
+<a href="https://cf.qq.com">穿越火线官网</a>
+<hr>
+<h1>伪类和CSS类</h1>
+<pre>a.red:visited {color:#FF0000;}
+&lta class="red" href="css-syntax.html"&gtCSS 语法&lt/a&gt
+如果在上面的例子的链接已被访问，它会显示为红色。</pre>
+<a class="red" href="http://www.runoob.com">runoob</a>
+<hr>
+<h1>CSS :first-child 伪类</h1>
+<pre>您可以使用 :first-child 伪类来选择父元素的第一个子元素。
+注意：在IE8的之前版本必须声明&lt!DOCTYPE&gt ，这样 :first-child 才能生效。</pre>
+</body>
+</html>
